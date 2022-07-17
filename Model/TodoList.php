@@ -2,5 +2,7 @@
 
 $todolist = [
     "Aku",
-    "Kamu"
+    "Kamu",
+    "Dia",
+    "Mereka"
 ];
