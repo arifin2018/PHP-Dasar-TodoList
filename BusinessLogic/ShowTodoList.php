@@ -8,6 +8,7 @@ function showTodoList()
     // die;
     echo "ToDoList" . PHP_EOL;
     foreach ($todolist as $number => $value) {
-        echo "$number. $value" . PHP_EOL;
+        $numbers = $number + 1;
+        echo "{$numbers}. $value" . PHP_EOL;
     }
 }
