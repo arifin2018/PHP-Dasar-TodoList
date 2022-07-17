@@ -1,5 +1,6 @@
 <?php
 
 $todolist = [
-    "Aku"
+    "Aku",
+    "Kamu"
 ];
