@@ -15,17 +15,19 @@ function ViewShowTodoList()
     echo "x. Keluar" . PHP_EOL;
 
     $pilihan = trim(input("Pilihan kamu"));
-    switch ($pilihan) {
-        case "1":
-            ViewAddTodoList();
-            ViewShowTodoList();
-        case "2":
-            ViewRemoveTodoList();
-            ViewShowTodoList();
-        case 'x':
-            break;
-        default:
-            echo "pilihan tidak dimengerti";
-            ViewShowTodoList();
+    while (true) {
+        switch ($pilihan) {
+            case "1":
+                ViewAddTodoList();
+                ViewShowTodoList();
+            case "2":
+                ViewRemoveTodoList();
+                ViewShowTodoList();
+            case 'x':
+                break;
+                return false;
+            default:
+                echo "pilihan tidak dimengerti";
+        }
     }
 }
