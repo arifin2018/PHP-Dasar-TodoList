@@ -1,6 +1,5 @@
 <?php
-
-require_once '/Users/arifinlenna/Documents/belajar/PHP-Dasar-TodoList/Model/TodoList.php';
+require_once __ROOT__ . '/Model/TodoList.php';
 
 // Menampilkan todolist
 function showTodoList()
