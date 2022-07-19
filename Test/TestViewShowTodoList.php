@@ -1,5 +1,6 @@
 <?php
 
-require_once '/Users/arifinlenna/Documents/belajar/PHP-Dasar-TodoList/View/ViewShowTodoList.php';
+define('__ROOT__', dirname(dirname(__FILE__)));
+require_once __ROOT__ . '/View/ViewShowTodoList.php';
 
 ViewShowTodoList();
