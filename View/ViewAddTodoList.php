@@ -8,10 +8,9 @@ function ViewAddTodoList()
 {
     echo "Menambah TodoList";
     $todo = Input("Todo ('x' untuk batal)");
-    switch ($todo) {
-        case 'x':
-            break;
-        default:
-            addTodoList($todo);
+    if ($todo == 'x') {
+        echo "batal menambah todo" . PHP_EOL;
+    } else {
+        addTodoList($todo);
     }
 }
