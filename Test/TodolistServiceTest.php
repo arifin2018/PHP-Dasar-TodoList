@@ -6,6 +6,7 @@ use Service\TodoListServiceImpl;
 define('__ROOT__', dirname(dirname(__FILE__)));
 require_once __ROOT__ . '/Repository/TodoListRepository.php';
 require_once __ROOT__ . '/Service/TodoListService.php';
+require_once __ROOT__ . '/Entity/TodoList.php';
 
 function testShowTodoList(): void
 {
@@ -17,4 +18,15 @@ function testShowTodoList(): void
 
     $todolistService->showTodoList();
 }
-testShowTodoList();
+
+function testaddTodoList(): void
+{
+    $todolistRepository = new TodoListRepositoryImpl();
+    $todolistService = new TodoListServiceImpl($todolistRepository);
+    $todolistService->addTodoList("Belajar PHP");
+    $todolistService->addTodoList("Belajar JAVA");
+    $todolistService->addTodoList("Belajar Go");
+
+    $todolistService->showTodoList();
+}
+testaddTodoList();
