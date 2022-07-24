@@ -23,23 +23,26 @@ namespace Service {
 
         public function showTodoList(): void
         {
-
             echo "ToDoList" . PHP_EOL;
-            foreach ($this->todolistRepository->findAll() as $number => $value) {
-                // $numbers = $number + 1;
-                echo "{$number}. $value" . PHP_EOL;
+
+            $todoList = $this->todolistRepository->findAll();
+            foreach ($todoList as $number => $value) {
+                echo "{$number}. " . $value->getTodo() . PHP_EOL;
             }
         }
         public function addTodoList(string $todo): void
         {
-            print_r(new Todolist());
-            die;
             $todoList = new TodoList($todo);
             $this->todolistRepository->save($todoList);
             echo "Sukses menambah todolist" . PHP_EOL;
         }
         public function removeTodoList(int $number): void
         {
+            if ($this->todolistRepository->remove($number)) {
+                echo "sukses menghapus data";
+            } else {
+                echo "gagal menghapus data";
+            }
         }
     }
 }
