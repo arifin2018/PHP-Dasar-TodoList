@@ -22,6 +22,6 @@ function testViewShowTodolist(): void
     $todolistService->addTodolist("Belajar PHP OOP");
     $todolistService->addTodolist("Belajar PHP Database");
 
-    $todolistView->showTodolist();
+    $todolistView->viewShowTodoList();
 }
 testViewShowTodoList();
