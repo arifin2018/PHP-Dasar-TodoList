@@ -30,7 +30,7 @@ namespace Repository {
             }
 
             for ($i = $number; $i < sizeof($todolist); $i++) {
-                $todolist[$i] = $todolist[$i + 1];
+                $this->todoList[$i] = $todolist[$i + 1];
             }
 
             unset($this->todoList[sizeof($todolist)]);

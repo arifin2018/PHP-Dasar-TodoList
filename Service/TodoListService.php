@@ -12,7 +12,7 @@ namespace Service {
         public function removeTodoList(int $number): void;
     }
 
-    class TodoListServiceImpl
+    class TodoListServiceImpl implements TodoListService
     {
         private TodoListRepository $todolistRepository;
 
@@ -39,9 +39,9 @@ namespace Service {
         public function removeTodoList(int $number): void
         {
             if ($this->todolistRepository->remove($number)) {
-                echo "sukses menghapus data";
+                echo "sukses menghapus data" . PHP_EOL;
             } else {
-                echo "gagal menghapus data";
+                echo "gagal menghapus data" . PHP_EOL;
             }
         }
     }

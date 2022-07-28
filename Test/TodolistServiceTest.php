@@ -47,6 +47,8 @@ function testDeleteTodoList(): void
     $todolistService->addTodoList("Belajar Gos");
 
     $todolistService->removeTodoList(1);
+    $todolistService->removeTodoList(2);
+    $todolistService->removeTodoList(1);
     $todolistService->showTodoList();
 }
 
