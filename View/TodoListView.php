@@ -41,7 +41,7 @@ namespace View {
         public function addTodoList(): void
         {
             echo "Menambah TodoList";
-            $todo = InputHelper::Input("Todo ('x' untuk batal)");
+            $todo = trim(InputHelper::Input("Todo ('x' untuk batal)"));
             if ($todo == '0') {
                 echo "batal menambah todo" . PHP_EOL;
             } else {

@@ -24,4 +24,4 @@ function testViewShowTodolist(): void
 
     $todolistView->viewShowTodoList();
 }
-testViewShowTodoList();
+testViewShowTodolist();
